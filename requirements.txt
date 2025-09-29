@@ -1,0 +1,5 @@
+requests>=2.31.0
+# Optional (external tools called by the script, not Python packages):
+# waybackurls (go tool) — https://github.com/tomnomnom/waybackurls
+# ffuf (fuzzer) — https://github.com/ffuf/ffuf
+# gobuster (fuzzer) — https://github.com/OJ/gobuster
