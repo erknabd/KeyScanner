@@ -6,6 +6,9 @@ A small Python utility that fetches web pages (or a list of targets) and searche
 
 > **Warning / Ethics**: This tool is intended for **authorized** security testing, auditing your own assets, or with explicit permission. Do **not** scan targets you do not own or don’t have written permission to test.
 
+![photo](./photo.png)
+
+
 ## Features
 
 - Detects common token patterns (OpenAI, Google API, AWS keys, Stripe keys, GitHub PATs, Slack tokens, JWTs, RSA/PGP private keys, etc.).
