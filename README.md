@@ -1,5 +1,3 @@
-
-````markdown
 ## KeyScanner
 
 **Compact scanner to find exposed API keys, tokens and secrets in web pages**
@@ -98,4 +96,4 @@ python KeyScanner.py -t targets.txt --use-wayback --external-waybackurls --exter
 This repository is provided under the MIT License. Use responsibly.
 
 ```
-```
+
