@@ -330,6 +330,10 @@ class CombinedApiKeyScanner:
                 urls = [l.strip() for l in f if l.strip()]
             for u in urls:
                 r = self.scan_url(u)
+                if not r:
+                    print(f"✅ {u} — Clean. No API keys or secrets found.")
+                else:
+                    print(f"🚨 {u} — {len(r)} potential keys detected!")
                 all_results.extend(r)
 
                 if use_wayback:
@@ -371,6 +375,15 @@ def main():
 
     if args.url:
         results = scanner.scan_url(args.url)
+        if not results:
+            print(f"✅ Scan complete for {args.url} — No API keys or secrets detected.")
+        else:
+            print(f"🚨 Scan complete for {args.url} — {len(results)} potential keys detected!")
+
+    if args.output:
+        with open(args.output, "w") as fh:
+            json.dump(results, fh, indent=2)
+
         if args.output:
             with open(args.output, "w") as fh:
                 json.dump(results, fh, indent=2)
